@@ -63,6 +63,7 @@ CSS file.
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
+@include foundation-prototype-spacing;
 
 // Import your custom styles
 @import "global";

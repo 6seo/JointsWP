@@ -42,7 +42,14 @@
 			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
 			
 			<div class="off-canvas-content" data-off-canvas-content>
-				
+			<?php if ( is_front_page() ) { ?>
+			<header class="subnav-hero-section">
+				<h1 class="subnav-hero-headline"><?php bloginfo('name'); ?> <small>made</small></h1>				
+				<?php joints_top_nav(); ?>	
+			</header>
+			<?php } ?>
+			
+			<?php if ( is_archive() || is_category() ) { ?>
 				<header class="header" role="banner">
 							
 					 <!-- This navs will be applied to the topbar, above all content 
@@ -50,3 +57,4 @@
 					 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
 	 	
 				</header> <!-- end .header -->
+			<?php } ?>

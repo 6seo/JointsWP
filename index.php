@@ -9,20 +9,20 @@
 
 get_header(); ?>
 			
-	<div class="content">
+	<div class="content margin-top-2">
 	
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
 	
 		    <main class="main small-12 medium-8 large-8 cell" role="main">
-		    
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			 
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive' ); ?>
-				    
-				<?php endwhile; ?>	
-
-					<?php joints_page_navi(); ?>
+		    	<div class="grid-x grid-margin-x grid-padding-x archive-grid card-grid" data-equalizer data-ajax="target"> <!--Begin Grid-->
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				
+						<!-- To see additional archive styles, visit the /parts directory -->
+						<?php get_template_part( 'parts/loop', 'archive-grid-card' ); ?>
+						
+					<?php endwhile; ?>	
+				</div><!--End Grid --> 
+					<?php get_template_part( 'parts/load-more') ?> 
 					
 				<?php else : ?>
 											

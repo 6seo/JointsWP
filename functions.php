@@ -25,6 +25,15 @@ require_once(get_template_directory().'/functions/comments.php');
 // Replace 'older/newer' post links with numbered navigation
 require_once(get_template_directory().'/functions/page-navi.php'); 
 
+// Ajax
+require_once(get_template_directory().'/functions/ajax.php'); 
+
+// Adds Author taxonomy for posts
+require_once(get_template_directory().'/functions/post-taxonomy.php');
+
+// Custom php
+require_once(get_template_directory().'/functions/custom.php'); 
+
 // Adds support for multiple languages
 require_once(get_template_directory().'/functions/translation/translation.php'); 
 

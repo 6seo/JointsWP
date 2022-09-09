@@ -14,8 +14,8 @@
 	</header> <!-- end article header -->
 					
 	<section class="entry-content" itemprop="text">
-		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
-		<?php the_content('<button class="tiny">' . __( 'Read more...', 'jointswp' ) . '</button>'); ?>
+		<a class="" href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
+		<p class=""><?php echo wp_trim_words( get_the_content(), 40, '<button class="hollow button tiny margin-left-1 margin-top-1">' . __( 'Read more...', 'jointswp' ) . '</button>' );?></p>
 	</section> <!-- end article section -->
 						
 	<footer class="article-footer">
@@ -23,3 +23,4 @@
 	</footer> <!-- end article footer -->	
 				    						
 </article> <!-- end article -->
+
