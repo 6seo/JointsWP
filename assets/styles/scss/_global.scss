@@ -83,20 +83,34 @@ $subnav-hero-transition: all 0.35s ease-in-out;
   .subnav-hero-headline {
     color: $white;
   }
+
+  &__menu {
+	/* right: 48px; */
+	position: absolute;
+	bottom: 0;
+	.drilldown .is-drilldown-submenu {
+		background: $primary-color;
+	}
+	.drilldown .is-drilldown-submenu-parent>a:after {
+		border-color: transparent transparent transparent $white;
+		right: -0.1rem;
+	}
+   }
 }
 
 .subnav-hero-subnav {
   float: none;
-  position: absolute;
+  //position: absolute;
   text-align: center;
   margin: 0 auto;
   justify-content: center;
-  bottom: 0;
+  //bottom: 0;
   width: 100%;
 
   li {
     float: none;
     display: inline-block;
+	
 
     a {
       padding: $subnav-hero-link-padding;
@@ -107,6 +121,7 @@ $subnav-hero-transition: all 0.35s ease-in-out;
       font-weight: bold;
       letter-spacing: 1px;
       transition: $subnav-hero-transition;
+	  background: none;
 
       &.is-active {
         background: rgba($white, $subnav-hero-link-opacity);

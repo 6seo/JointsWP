@@ -44,9 +44,15 @@
 			<div class="off-canvas-content" data-off-canvas-content>
 			<?php if ( is_front_page() ) { ?>
 			<header class="subnav-hero-section">
-				<h1 class="subnav-hero-headline"><?php bloginfo('name'); ?> <small>made</small></h1>				
-				<?php joints_top_nav(); ?>	
+				<h1 class="subnav-hero-headline"><?php bloginfo('name'); ?> <small>made</small></h1>
+				<div class="subnav-hero-section__menu">
+				<?php joints_top_nav(); ?>					
+				</div>	
+							
 			</header>
+
+
+			
 			<?php } ?>
 			
 			<?php if ( is_archive() || is_category() ) { ?>
